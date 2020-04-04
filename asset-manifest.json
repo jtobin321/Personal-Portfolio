@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/personal-portfolio/static/js/main.d16ce4ac.chunk.js",
+    "main.js.map": "/personal-portfolio/static/js/main.d16ce4ac.chunk.js.map",
+    "runtime-main.js": "/personal-portfolio/static/js/runtime-main.f44dd9cb.js",
+    "runtime-main.js.map": "/personal-portfolio/static/js/runtime-main.f44dd9cb.js.map",
+    "static/css/2.e3b429c3.chunk.css": "/personal-portfolio/static/css/2.e3b429c3.chunk.css",
+    "static/js/2.bad01a62.chunk.js": "/personal-portfolio/static/js/2.bad01a62.chunk.js",
+    "static/js/2.bad01a62.chunk.js.map": "/personal-portfolio/static/js/2.bad01a62.chunk.js.map",
+    "index.html": "/personal-portfolio/index.html",
+    "precache-manifest.ba24acf4cd508a46fd8089f64515eeef.js": "/personal-portfolio/precache-manifest.ba24acf4cd508a46fd8089f64515eeef.js",
+    "service-worker.js": "/personal-portfolio/service-worker.js",
+    "static/css/2.e3b429c3.chunk.css.map": "/personal-portfolio/static/css/2.e3b429c3.chunk.css.map",
+    "static/js/2.bad01a62.chunk.js.LICENSE.txt": "/personal-portfolio/static/js/2.bad01a62.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/personal-portfolio/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/navbar-logo.png": "/personal-portfolio/static/media/navbar-logo.a8d61302.png",
+    "static/media/waving_hand_emoji.png": "/personal-portfolio/static/media/waving_hand_emoji.d3fbd29e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f44dd9cb.js",
+    "static/css/2.e3b429c3.chunk.css",
+    "static/js/2.bad01a62.chunk.js",
+    "static/js/main.d16ce4ac.chunk.js"
+  ]
+}
