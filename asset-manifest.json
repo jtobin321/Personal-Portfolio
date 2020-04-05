@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.js": "/personal-portfolio/static/js/main.421d7ab2.chunk.js",
-    "main.js.map": "/personal-portfolio/static/js/main.421d7ab2.chunk.js.map",
-    "runtime-main.js": "/personal-portfolio/static/js/runtime-main.f44dd9cb.js",
-    "runtime-main.js.map": "/personal-portfolio/static/js/runtime-main.f44dd9cb.js.map",
-    "static/css/2.751b5cb2.chunk.css": "/personal-portfolio/static/css/2.751b5cb2.chunk.css",
-    "static/js/2.2100aedb.chunk.js": "/personal-portfolio/static/js/2.2100aedb.chunk.js",
-    "static/js/2.2100aedb.chunk.js.map": "/personal-portfolio/static/js/2.2100aedb.chunk.js.map",
-    "index.html": "/personal-portfolio/index.html",
-    "precache-manifest.ca42a74107f28783df751d5a4a91eb17.js": "/personal-portfolio/precache-manifest.ca42a74107f28783df751d5a4a91eb17.js",
-    "service-worker.js": "/personal-portfolio/service-worker.js",
-    "static/css/2.751b5cb2.chunk.css.map": "/personal-portfolio/static/css/2.751b5cb2.chunk.css.map",
-    "static/js/2.2100aedb.chunk.js.LICENSE.txt": "/personal-portfolio/static/js/2.2100aedb.chunk.js.LICENSE.txt",
-    "static/media/semantic.min.css": "/personal-portfolio/static/media/outline-icons.ef60a4f6.woff",
-    "static/media/navbar-logo.png": "/personal-portfolio/static/media/navbar-logo.a8d61302.png",
-    "static/media/waving_hand_emoji.png": "/personal-portfolio/static/media/waving_hand_emoji.d3fbd29e.png"
+    "main.js": "/static/js/main.421d7ab2.chunk.js",
+    "main.js.map": "/static/js/main.421d7ab2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3b073f80.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3b073f80.js.map",
+    "static/css/2.7253a256.chunk.css": "/static/css/2.7253a256.chunk.css",
+    "static/js/2.2100aedb.chunk.js": "/static/js/2.2100aedb.chunk.js",
+    "static/js/2.2100aedb.chunk.js.map": "/static/js/2.2100aedb.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9f37af1447ecfc0443618c2afa6c7420.js": "/precache-manifest.9f37af1447ecfc0443618c2afa6c7420.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.7253a256.chunk.css.map": "/static/css/2.7253a256.chunk.css.map",
+    "static/js/2.2100aedb.chunk.js.LICENSE.txt": "/static/js/2.2100aedb.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/navbar-logo.png": "/static/media/navbar-logo.a8d61302.png",
+    "static/media/waving_hand_emoji.png": "/static/media/waving_hand_emoji.d3fbd29e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f44dd9cb.js",
-    "static/css/2.751b5cb2.chunk.css",
+    "static/js/runtime-main.3b073f80.js",
+    "static/css/2.7253a256.chunk.css",
     "static/js/2.2100aedb.chunk.js",
     "static/js/main.421d7ab2.chunk.js"
   ]
