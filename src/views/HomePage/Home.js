@@ -164,11 +164,12 @@ class MobileContainer extends Component {
                     <Menu.Item as='a' active>
                         Home
           </Menu.Item>
-                    <Menu.Item as='a'>Work</Menu.Item>
-                    <Menu.Item as='a'>Company</Menu.Item>
-                    <Menu.Item as='a'>Careers</Menu.Item>
-                    <Menu.Item as='a'>Log in</Menu.Item>
-                    <Menu.Item as='a'>Sign Up</Menu.Item>
+                    <Menu.Item as='a' href="#">Projects</Menu.Item>
+                    <Menu.Item as='a' href="#">Resume</Menu.Item>
+                    <Menu.Item as='a' href="#">Contact Me</Menu.Item>
+                    <Menu.Item as='a' href="https://github.com/jtobin321" target="_blank">Github</Menu.Item>
+                    <Menu.Item as='a' href="https://linkedin.com/in/jack-tobin" target="_blank">LinkedIn</Menu.Item>
+                    <Menu.Item as='a' href="https://twitter.com/__jack_tobin__" target="_blank">Twitter</Menu.Item>
                 </Sidebar>
 
                 <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -185,12 +186,15 @@ class MobileContainer extends Component {
                                 </Menu.Item>
                                 <Menu.Item position='right'>
                                     <Button as='a' inverted>
-                                        Log in
+                                        <Icon name='mail' />
+                                        Contact Me
                   </Button>
-                                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                                        Sign Up
+                  <Button as='a' inverted style={{ marginLeft: '0.5em' }} href="https://github.com/jtobin321/personal-portfolio" target="_blank">
+                        <Icon name="github" />
+                                        View Source
                   </Button>
                                 </Menu.Item>
+                                
                             </Menu>
                         </Container>
                         <HomepageHeading mobile />
