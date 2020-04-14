@@ -14,7 +14,7 @@ const NavBar = (props) => {
         <div>
             <Menu fixed='top' inverted>
                 <Container>
-                    <Menu.Item disabled header>
+                    <Menu.Item as='a' header>
                         <Image size='mini' src={logo} style={{ marginRight: '1.5em' }} />
                         <p style={{ color: "white" }}>Jack Tobin</p>
                     </Menu.Item>
