@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { scroller } from 'react-scroll';
 
 import {
     Button,
@@ -19,6 +20,14 @@ import { links } from '../../../defaults';
 import HomePageHeading from '../heading/HomePageHeading';
 
 const DesktopContainer = (children) => {
+    const handleScrollTo = (elementName) => {
+        scroller.scrollTo(elementName, {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart'
+        });
+      }
+
     const [fixed, setFixed] = React.useState(null);
 
     return (
@@ -31,7 +40,7 @@ const DesktopContainer = (children) => {
                 <Segment
                     inverted
                     textAlign='center'
-                    style={{ minHeight: 700, padding: '1em 0em' }}
+                    style={{ minHeight: 600, padding: '1em 0em' }}
                     vertical
                 >
                     <Menu
@@ -45,7 +54,7 @@ const DesktopContainer = (children) => {
                             <Menu.Item active as='a'>
                                 <Image size='mini' src={logo} />
                             </Menu.Item>
-                            <Menu.Item as='a'>About Me</Menu.Item>
+                            <Menu.Item as='a' onClick={() => { handleScrollTo('about-me'); }}>About Me</Menu.Item>
                             <Menu.Item as='a'>Projects</Menu.Item>
                             <Dropdown item simple text='Media'>
                                 <Dropdown.Menu>

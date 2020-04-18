@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Element } from 'react-scroll';
+
 import {
     Button,
     Container,
@@ -44,36 +46,38 @@ ResponsiveContainer.propTypes = {
 
 const Home = () => (
     <ResponsiveContainer>
-        <Segment style={{ padding: '8em 0em' }} vertical>
-            <Grid container stackable verticalAlign='middle'>
-                <Grid.Row>
-                    <Grid.Column width={8}>
-                        <Header as='h3' style={{ fontSize: '2em' }}>
-                            We Help Companies and Companions
-            </Header>
-                        <p style={{ fontSize: '1.33em' }}>
-                            We can give your company superpowers to do things that they never thought possible.
-                            Let us delight your customers and empower your needs... through pure data analytics.
-            </p>
-                        <Header as='h3' style={{ fontSize: '2em' }}>
-                            We Make Bananas That Can Dance
-            </Header>
-                        <p style={{ fontSize: '1.33em' }}>
-                            Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-                            bioengineered.
-            </p>
-                    </Grid.Column>
-                    <Grid.Column floated='right' width={6}>
-                        <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column textAlign='center'>
-                        <Button size='huge'>Check Them Out</Button>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </Segment>
+        <Element name='about-me'>
+            <Segment style={{ padding: '8em 0em' }} vertical>
+                <Grid container stackable verticalAlign='middle'>
+                    <Grid.Row>
+                        <Grid.Column width={8}>
+                            <Header as='h3' style={{ fontSize: '2em' }}>
+                                We Help Companies and Companions
+                </Header>
+                            <p style={{ fontSize: '1.33em' }}>
+                                We can give your company superpowers to do things that they never thought possible.
+                                Let us delight your customers and empower your needs... through pure data analytics.
+                </p>
+                            <Header as='h3' style={{ fontSize: '2em' }}>
+                                We Make Bananas That Can Dance
+                </Header>
+                            <p style={{ fontSize: '1.33em' }}>
+                                Yes that's right, you thought it was the stuff of dreams, but even bananas can be
+                                bioengineered.
+                </p>
+                        </Grid.Column>
+                        <Grid.Column floated='right' width={6}>
+                            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                        <Grid.Column textAlign='center'>
+                            <Button size='huge'>Check Them Out</Button>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </Element>
 
         <Segment style={{ padding: '0em' }} vertical>
             <Grid celled='internally' columns='equal' stackable>
@@ -136,23 +140,23 @@ const Home = () => (
 
         <Segment inverted style={{ margin: '2em 0em 0em', padding: '3em 0em' }} vertical>
             <Container textAlign='center'>
-                
+
                 <Divider inverted section />
                 <Image src={logo} centered size='tiny' />
                 <List horizontal inverted divided link size='small'>
                     <List.Item>
                         Created by Jack Tobin
               </List.Item>
-              <List.Item as='a' href={links.github} target="_blank">
+                    <List.Item as='a' href={links.github} target="_blank">
                         Github
               </List.Item>
-              <List.Item as='a' href={links.linkedin} target="_blank">
+                    <List.Item as='a' href={links.linkedin} target="_blank">
                         LinkedIn
               </List.Item>
-              <List.Item as='a' href={links.twitter} target="_blank">
+                    <List.Item as='a' href={links.twitter} target="_blank">
                         Twitter
               </List.Item>
-              <List.Item as='a' href='/'>
+                    <List.Item as='a' href='/'>
                         Contact Me
               </List.Item>
                 </List>

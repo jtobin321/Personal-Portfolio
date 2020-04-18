@@ -54,7 +54,7 @@ const MobileContainer = (children) => {
                                 <Icon name='sidebar' />
                             </Menu.Item>
                             <Menu.Item position='right'>
-                                <Button as='a' href="/" inverted><Icon name='mail' />Contact Me</Button>
+                                <Button as='a' href="/contact" inverted><Icon name='mail' />Contact Me</Button>
                                 <Button 
                                     as='a' 
                                     inverted 

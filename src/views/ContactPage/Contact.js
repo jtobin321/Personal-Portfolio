@@ -34,7 +34,7 @@ const Contact = () => {
             <Grid.Column style={{ maxWidth: 700 }}>
                 <Form size='large'>
                     <Segment stacked>
-                        <Header as='h2' textAlign='center'>
+                        <Header as='h1' textAlign='center'>
                             <Image src={logo} /> Contact Me</Header>
 
                         <Form.Group widths='equal'>
