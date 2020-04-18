@@ -46,10 +46,10 @@ ResponsiveContainer.propTypes = {
 
 const Home = () => (
     <ResponsiveContainer>
-        <Element name='about-me'>
-            <Segment style={{ padding: '8em 0em' }} vertical>
+            <Segment style={{ padding: '2em 0em' }} vertical>
                 <Grid container stackable verticalAlign='middle'>
-                    <Grid.Row>
+                <Element name='about-me'>
+                    <Grid.Row style={{padding: '8em 0em'}}>
                         <Grid.Column width={8}>
                             <Header as='h3' style={{ fontSize: '2em' }}>
                                 We Help Companies and Companions
@@ -70,6 +70,7 @@ const Home = () => (
                             <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
                         </Grid.Column>
                     </Grid.Row>
+                    </Element>
                     <Grid.Row>
                         <Grid.Column textAlign='center'>
                             <Button size='huge'>Check Them Out</Button>
@@ -77,7 +78,6 @@ const Home = () => (
                     </Grid.Row>
                 </Grid>
             </Segment>
-        </Element>
 
         <Segment style={{ padding: '0em' }} vertical>
             <Grid celled='internally' columns='equal' stackable>
