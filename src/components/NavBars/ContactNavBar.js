@@ -5,11 +5,11 @@ import {
     Dropdown,
     Image,
     Menu,
-  } from 'semantic-ui-react';
+} from 'semantic-ui-react';
 
-  import logo from '../logos/navbar-logo.png';
+import logo from '../logos/navbar-logo.png';
 
-const NavBar = (props) => {
+const ContactNavBar = () => {
     return (
         <div>
             <Menu fixed='top' inverted>
@@ -33,4 +33,4 @@ const NavBar = (props) => {
     );
 }
 
-export default NavBar;
+export default ContactNavBar;

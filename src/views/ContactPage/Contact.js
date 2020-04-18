@@ -2,14 +2,21 @@ import React from 'react';
 
 import {
     Button,
-    Icon,
+    Image,
     Grid,
     Header,
     Form,
-    Segment,
-    Dropdown,
-    Message
+    Segment
 } from 'semantic-ui-react';
+
+import logo from '../../logos/navbar-logo.png';
+import NavBar from '../../components/NavBar';
+
+const options = [
+    { key: 'request', text: 'Website Request', value: 'request' },
+    { key: 'offer', text: 'Job Offer', value: 'offer' },
+    { key: 'other', text: 'Other', value: 'other' },
+]
 
 const Contact = () => {
     const [email, setEmail] = React.useState(null);
@@ -21,32 +28,40 @@ const Contact = () => {
     }
 
     return (
-        <div style={{backgroundColor: "#1b1c1d", height: "100vh"}}>
-        <Grid textAlign='center' verticalAlign='middle'>
-                <Grid.Column style={{ maxWidth: 700 }}>
-                    <Header as='h1' color='teal' textAlign='center'>Contact Me</Header>
-                    <Form size='large'>
-                        <Segment stacked>
-                        <Message negative visible={errors} hidden={!errors}>
-                            <Message.Header>There are errors with this form</Message.Header>
-                            <p>Please make sure all of the fields are filled out properly</p>
-                        </Message>
-                            <Form.Group widths='equal'>
-                                <Form.Input fluid onChange={(event) => setEmail(event.target.value)} label="Email" placeholder="Email" />
-                                <Form.Input fluid onChange={(event) => setName(event.target.value)} label="Name" placeholder="Name" />
-                            </Form.Group>
-                            <Form.Group widths='equal'>
-                                <Button color='teal' fluid onClick={handleSubmit}>Submit</Button>
-                            </Form.Group>
-                            <Header as='h3' textAlign='center'>Output Text</Header>
-                            <Segment raised>
-                                nothing
-                            </Segment>
-                        </Segment>
-                    </Form>
-                </Grid.Column>
-            </Grid>
-            </div>
+        <div>
+        <NavBar />
+        <Grid textAlign='center' style={{ height: '102.25vh', backgroundColor: "#1b1c1d" }} verticalAlign='middle'>
+            <Grid.Column style={{ maxWidth: 700 }}>
+                <Form size='large'>
+                    <Segment stacked>
+                        <Header as='h2' textAlign='center'>
+                            <Image src={logo} /> Contact Me</Header>
+
+                        <Form.Group widths='equal'>
+                            <Form.Input fluid icon='user' iconPosition='left' placeholder='Full Name' />
+                            <Form.Input
+                                fluid
+                                icon='mail'
+                                iconPosition='left'
+                                placeholder='Email'
+                            />
+                            <Form.Select
+                                fluid
+                                options={options}
+                                placeholder='Subject'
+                            />
+                        </Form.Group>
+                        <Form.TextArea label='Message' placeholder="Please describe your inquiry in detail..." />
+                        <Form.Checkbox label='I am not a robot' />
+
+                        <Button style={{ backgroundColor: "#5cc2f2" }} fluid size='large'>
+                            Send
+          </Button>
+                    </Segment>
+                </Form>
+            </Grid.Column>
+        </Grid>
+        </div>
     );
 }
 
