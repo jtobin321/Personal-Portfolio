@@ -8,6 +8,7 @@ import {
 
 import Home from './views/HomePage/Home';
 import Contact from './views/ContactPage/Contact';
+import Resume from './views/ResumePage/Resume';
 
 const history = createBrowserHistory();
 
@@ -17,6 +18,7 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/contact" component={Contact} />
+                <Route exact path="/resume" component={Resume} />
             </Switch>
         </BrowserRouter>
     );

@@ -20,15 +20,15 @@ import { links } from '../../../defaults';
 import HomePageHeading from '../heading/HomePageHeading';
 
 const DesktopContainer = (children) => {
+    const [fixed, setFixed] = React.useState(null);
+
     const handleScrollTo = (elementName) => {
         scroller.scrollTo(elementName, {
-          duration: 800,
-          delay: 0,
-          smooth: 'easeInOutQuart'
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
         });
-      }
-
-    const [fixed, setFixed] = React.useState(null);
+    }
 
     return (
         <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>

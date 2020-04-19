@@ -1,4 +1,5 @@
 import React from 'react';
+import { scroller } from 'react-scroll';
 
 import {
     Responsive,
@@ -18,6 +19,16 @@ import { links } from '../../../defaults';
 const MobileContainer = (children) => {
     const [sidebarOpened, setSidebarOpened] = React.useState(false);
 
+    const handleScrollTo = (elementName) => {
+        setSidebarOpened(false);
+
+        scroller.scrollTo(elementName, {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        });
+    }
+
     return (
         <Responsive
             as={Sidebar.Pushable}
@@ -33,7 +44,6 @@ const MobileContainer = (children) => {
                 visible={sidebarOpened}
             >
                 <Menu.Item as='a' active>Home</Menu.Item>
-                <Menu.Item as='a' href="#">Projects</Menu.Item>
                 <Menu.Item as='a' href="#">Resume</Menu.Item>
                 <Menu.Item as='a' href="/">Contact Me</Menu.Item>
                 <Menu.Item as='a' href={links.github} target="_blank">Github</Menu.Item>
