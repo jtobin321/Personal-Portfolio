@@ -9,7 +9,7 @@ import {
     Segment
 } from 'semantic-ui-react';
 
-import logo from '../../logos/navbar-logo.png';
+import logo from '../../assets/logos/navbar-logo.png';
 import NavBar from '../../components/NavBar';
 
 const options = [

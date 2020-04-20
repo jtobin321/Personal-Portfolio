@@ -1,5 +1,6 @@
 import React from 'react';
 import { scroller } from 'react-scroll';
+import PropTypes from 'prop-types';
 
 import {
     Responsive,
@@ -15,6 +16,10 @@ import HomePageHeading from '../heading/HomePageHeading';
 
 import { getWidth } from '../../../utils/responsive';
 import { links } from '../../../defaults';
+
+HomePageHeading.propTypes = {
+    mobile: PropTypes.bool,
+}
 
 const MobileContainer = (children) => {
     const [sidebarOpened, setSidebarOpened] = React.useState(false);

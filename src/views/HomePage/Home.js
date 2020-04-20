@@ -11,19 +11,16 @@ import {
     Header,
     Image,
     List,
-    Segment
+    Segment,
+    Icon
 } from 'semantic-ui-react';
 
-import HomepageHeading from './heading/HomePageHeading';
 import DesktopContainer from './containers/DesktopContainer';
 import MobileContainer from './containers/MobileContainer';
 
-import logo from '../../logos/navbar-logo.png';
+import logo from '../../assets/logos/navbar-logo.png';
+import profilePic from '../../assets/images/profile-picture.jpg';
 import { links } from '../../defaults';
-
-HomepageHeading.propTypes = {
-    mobile: PropTypes.bool,
-}
 
 DesktopContainer.propTypes = {
     children: PropTypes.node,
@@ -46,41 +43,87 @@ ResponsiveContainer.propTypes = {
 
 const Home = () => (
     <ResponsiveContainer>
-            <Segment style={{ padding: '2em 0em' }} vertical>
-                <Grid container stackable verticalAlign='middle'>
+        <Segment style={{ padding: '2em 0em' }} vertical>
+            <Element name='about-me'>
+                <Grid style={{ padding: '6em 0em' }} stackable>
+                    <Grid.Row centered>
+                        <Grid.Column width={8}>
+                            <Segment>
+                                <Header as='h1' style={{ textAlign: "center" }}>Here's All About Me!</Header>
+                                <div style={{ fontSize: "1.4em" }}>
+                                    <p>
+                                        My name is Jack Tobin. I was borned and raised in a very small town called Bogota, NJ.
+                                        In my free time I like to make websites and go for runs. I'm always looking for innovaitve
+                                        creative experiences and connecting with new people.
+                            </p>
+                                    <p>
+                                        If you like what you've seen so far, you can click on the button below or
+                                        scroll down to view some of my finest projects/work.
+                            </p>
+                                </div>
+                            </Segment>
+                        </Grid.Column>
+                        <Grid.Column width={4}>
+                            <Image src={profilePic} rounded />
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row centered style={{marginBottom: '8em'}}>
+                        <Grid.Column width={4}>
+                            <Button.Group size='massive' >
+                                <Button icon>
+                                    <Icon name='angle double down' />
+                                </Button>
+                                <Button>View My Projects</Button>
+                                <Button icon>
+                                    <Icon name='angle double down' />
+                                </Button>
+                            </Button.Group>
+                        </Grid.Column>
+                    </Grid.Row>
+
+                    <Grid.Row>
+                        <Grid.Column width={3}>
+                            <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                        </Grid.Column>
+                        <Grid.Column width={10}>
+                            <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+                        </Grid.Column>
+                        <Grid.Column width={3}>
+                            <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Element>
+            {/* <Grid container stackable verticalAlign='middle'>
                 <Element name='about-me'>
                     <Grid.Row style={{padding: '8em 0em'}}>
                         <Grid.Column width={8}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
-                                We Help Companies and Companions
-                </Header>
-                            <p style={{ fontSize: '1.33em' }}>
-                                We can give your company superpowers to do things that they never thought possible.
-                                Let us delight your customers and empower your needs... through pure data analytics.
-                </p>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
-                                We Make Bananas That Can Dance
-                </Header>
-                            <p style={{ fontSize: '1.33em' }}>
-                                Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-                                bioengineered.
-                </p>
+                            <Header as='h3' style={{ fontSize: '2em' }}>Here's All About Me!</Header>
                         </Grid.Column>
-                        <Grid.Column floated='right' width={6}>
-                            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+                    </Grid.Row>
+                    <Grid.Row columns={2}>
+                        <Grid.Column >
+                        <p style={{ fontSize: '1.33em' }}>
+                                We can give your company superpowers to do things that they never thought possible.
+                                Let us delight your customers and empower your needs... through pure data analytics.</p>
+                        </Grid.Column>
+                        <Grid.Column >
+                        <p style={{ fontSize: '1.33em' }}>
+                                We can give your company superpowers to do things that they never thought possible.
+                                Let us delight your customers and empower your needs... through pure data analytics.</p>
                         </Grid.Column>
                     </Grid.Row>
                     </Element>
                     <Grid.Row>
                         <Grid.Column textAlign='center'>
-                            <Button size='huge'>Check Them Out</Button>
+                            <Button size='huge'>Check Out My Work</Button>
                         </Grid.Column>
                     </Grid.Row>
-                </Grid>
-            </Segment>
+                </Grid> */}
+        </Segment>
 
         <Segment style={{ padding: '0em' }} vertical>
-            <Grid celled='internally' columns='equal' stackable>
+            <Grid columns='equal' stackable>
                 <Grid.Row textAlign='center'>
                     <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                         <Header as='h3' style={{ fontSize: '2em' }}>

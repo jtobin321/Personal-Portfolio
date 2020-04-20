@@ -1,5 +1,6 @@
 import React from 'react';
 import { scroller } from 'react-scroll';
+import PropTypes from 'prop-types';
 
 import {
     Button,
@@ -14,10 +15,14 @@ import {
 } from 'semantic-ui-react';
 
 import { getWidth } from '../../../utils/responsive';
-import logo from '../../../logos/navbar-logo.png';
+import logo from '../../../assets/logos/navbar-logo.png';
 import { links } from '../../../defaults';
 
 import HomePageHeading from '../heading/HomePageHeading';
+
+HomePageHeading.propTypes = {
+    mobile: PropTypes.bool,
+}
 
 const DesktopContainer = (children) => {
     const [fixed, setFixed] = React.useState(null);

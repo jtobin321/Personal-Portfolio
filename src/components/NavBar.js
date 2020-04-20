@@ -7,7 +7,7 @@ import {
     Menu,
   } from 'semantic-ui-react';
 
-  import logo from '../logos/navbar-logo.png';
+  import logo from '../assets/logos/navbar-logo.png';
 
 const NavBar = (props) => {
     return (

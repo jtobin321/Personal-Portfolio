@@ -1,4 +1,5 @@
 import React from 'react';
+import { scroller } from 'react-scroll';
 
 import { 
     Container, 
@@ -8,9 +9,17 @@ import {
     Icon 
 } from 'semantic-ui-react';
 
-import handEmoji from '../../../logos/waving_hand_emoji.png';
+import handEmoji from '../../../assets/images/waving-hand-emoji.png';
 
-export const HomePageHeading = ({ mobile }) => (
+export const HomePageHeading = ({ mobile }) => {
+    const handleScrollTo = (elementName) => {
+        scroller.scrollTo(elementName, {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        });
+    }
+    return (
     <Container text>
         <Header
             as='h1'
@@ -33,11 +42,12 @@ export const HomePageHeading = ({ mobile }) => (
                 marginTop: mobile ? '0.5em' : '1.5em',
             }}
         />
-        <Button primary size='huge'>
+        <Button primary size='huge' onClick={() => { handleScrollTo('about-me') }}>
             Learn More About Me
       <Icon name='right arrow' />
         </Button>
     </Container>
 )
+        }
 
 export default HomePageHeading;
