@@ -14,7 +14,7 @@ import {
     Dropdown
 } from 'semantic-ui-react';
 
-import { getWidth } from '../../../utils/responsive';
+import { getWidth, handleScrollTo } from '../../../utils/responsive';
 import logo from '../../../assets/logos/navbar-logo.png';
 import { links } from '../../../defaults';
 
@@ -26,14 +26,6 @@ HomePageHeading.propTypes = {
 
 const DesktopContainer = (children) => {
     const [fixed, setFixed] = React.useState(null);
-
-    const handleScrollTo = (elementName) => {
-        scroller.scrollTo(elementName, {
-            duration: 800,
-            delay: 0,
-            smooth: 'easeInOutQuart'
-        });
-    }
 
     return (
         <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>

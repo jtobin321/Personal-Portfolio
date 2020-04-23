@@ -9,7 +9,9 @@ import {
     Segment,
     Container,
     Icon,
-    Button
+    Button,
+    Visibility,
+    Dropdown
 } from 'semantic-ui-react';
 
 import HomePageHeading from '../heading/HomePageHeading';
@@ -22,25 +24,58 @@ HomePageHeading.propTypes = {
 }
 
 const MobileContainer = (children) => {
-    const [sidebarOpened, setSidebarOpened] = React.useState(false);
-
-    const handleScrollTo = (elementName) => {
-        setSidebarOpened(false);
-
-        scroller.scrollTo(elementName, {
-            duration: 800,
-            delay: 0,
-            smooth: 'easeInOutQuart'
-        });
-    }
+    const [fixed, setFixed] = React.useState(null);
 
     return (
         <Responsive
-            as={Sidebar.Pushable}
             getWidth={getWidth}
             maxWidth={Responsive.onlyMobile.maxWidth}
         >
-            <Sidebar
+            <Visibility
+                once={false}
+                onBottomPassed={() => { setFixed(true) }}
+                onBottomPassedReverse={() => { setFixed(false) }}
+            >
+                <Segment
+                    inverted
+                    textAlign='center'
+                    style={{ minHeight: 600, padding: '1em 0em' }}
+                    vertical
+                >
+                    <Menu
+                        fixed={fixed ? 'top' : null}
+                        inverted={!fixed}
+                        pointing={!fixed}
+                        secondary={!fixed}
+                        size='massive'
+                        borderless={true}
+                    >
+                        <Container>
+                            <Menu.Item >
+                            <Dropdown
+                                trigger={<Icon name='sidebar'/>}
+                                icon={null}
+                            >
+                                <Dropdown.Menu>
+                <Menu.Item as='a' href="/resume" ><Icon name="address card outline"/>Resume</Menu.Item>
+                <Menu.Item as='a' href="/contact"><Icon name="mail outline"/>Contact Me</Menu.Item>
+                <Menu.Item as='a' href={links.github} target="_blank"><Icon name="github square"/>Github</Menu.Item>
+                <Menu.Item as='a' href={links.linkedin} target="_blank"><Icon name="linkedin"/>LinkedIn</Menu.Item>
+                <Menu.Item as='a' href={links.twitter} target="_blank"><Icon name="twitter square"/>Twitter</Menu.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                            </Menu.Item>
+                            <Menu.Item position='right'>
+                                <Icon link name='mail' style={{paddingRight: "1.5em"}}/>
+                                <Icon link name="github" />
+                                </Menu.Item>
+                        </Container>
+                    </Menu>
+                    <HomePageHeading />
+                </Segment>
+            </Visibility>
+            {children.children}
+            {/* <Sidebar
                 as={Menu}
                 animation='push'
                 inverted
@@ -84,7 +119,7 @@ const MobileContainer = (children) => {
                     <HomePageHeading mobile />
                 </Segment>
                 {children.children}
-            </Sidebar.Pusher>
+            </Sidebar.Pusher> */}
         </Responsive>
     )
 }
