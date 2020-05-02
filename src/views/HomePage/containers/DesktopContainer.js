@@ -26,6 +26,7 @@ HomePageHeading.propTypes = {
 
 const DesktopContainer = (children) => {
     const [fixed, setFixed] = React.useState(null);
+    const [currentNavElement, setCurrentNavElement] = React.useState('home');
 
     return (
         <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
@@ -48,11 +49,11 @@ const DesktopContainer = (children) => {
                         size='large'
                     >
                         <Container>
-                            <Menu.Item active as='a'>
+                            <Menu.Item active={currentNavElement === 'logo'} as='a'>
                                 <Image size='mini' src={logo} />
                             </Menu.Item>
-                            <Menu.Item as='a' onClick={() => { handleScrollTo('about-me'); }}>About Me</Menu.Item>
-                            <Menu.Item as='a'>Projects</Menu.Item>
+                            <Menu.Item active={currentNavElement === 'about-me'} as='a' onClick={() => { handleScrollTo('about-me'); }}>About Me</Menu.Item>
+                            <Menu.Item active={currentNavElement === 'projects'} as='a' onClick={() => { handleScrollTo('projects'); }}>Projects</Menu.Item>
                             <Dropdown item simple text='Media'>
                                 <Dropdown.Menu>
                                     <Dropdown.Item href={links.github} target="_blank">Github</Dropdown.Item>

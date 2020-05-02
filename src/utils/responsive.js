@@ -9,8 +9,9 @@ export const getWidth = () => {
 
 export const handleScrollTo = (elementName) => {
     scroller.scrollTo(elementName, {
-        duration: 800,
+        duration: 1000,
         delay: 0,
-        smooth: 'easeInOutQuart'
+        smooth: elementName === "about-me" ? 'easeInOutQuart' : true,
+        offset: elementName === "projects" ? -125 : 0
     });
 }

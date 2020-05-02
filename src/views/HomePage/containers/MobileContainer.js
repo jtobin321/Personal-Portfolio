@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 
 import {
     Responsive,
-    Sidebar,
+    Image,
     Menu,
     Segment,
     Container,
     Icon,
-    Button,
     Visibility,
     Dropdown
 } from 'semantic-ui-react';
@@ -18,6 +17,7 @@ import HomePageHeading from '../heading/HomePageHeading';
 
 import { getWidth } from '../../../utils/responsive';
 import { links } from '../../../defaults';
+import logo from '../../../assets/logos/navbar-logo.png';
 
 HomePageHeading.propTypes = {
     mobile: PropTypes.bool,
@@ -66,8 +66,7 @@ const MobileContainer = (children) => {
                             </Dropdown>
                             </Menu.Item>
                             <Menu.Item position='right'>
-                                <Icon link name='mail' style={{paddingRight: "1.5em"}}/>
-                                <Icon link name="github" />
+                                <Image src={logo} size='mini' />
                                 </Menu.Item>
                         </Container>
                     </Menu>
